@@ -1,0 +1,609 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: #ffb01e;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 30px;
+}
+
+.logo {
+    color: #333;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #333;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 550px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background-image: url("images/ctupic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.small-title {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+
+    background-color: #333;
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #666262;
+}
+
+
+/* Hero Icon */
+
+.hero-icon {
+    font-size: 180px;
+}
+
+
+/* General Sections */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+
+/* Services */
+
+.service-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card span {
+    font-size: 45px;
+}
+
+.service-card h3 {
+    margin: 15px 0;
+    color: #333;
+}
+
+
+/* Price Guide */
+
+.price-section {
+    background-color: #eef5f0;
+    max-width: none;
+}
+
+.price-table {
+    max-width: 700px;
+    margin: auto;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.price-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.price-row:last-child {
+    border-bottom: none;
+}
+
+.price-row strong {
+    color: #333;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* What Needs Fixing */
+
+.fixing-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.fixing-container button {
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #333;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.fixing-container button:hover {
+    background-color: #666262;
+}
+
+.result {
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+    padding: 25px;
+
+    background-color: #e9f3ed;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* How It Works */
+
+.steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.step {
+    padding: 25px;
+}
+
+.number {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #333;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.step h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+/* About */
+
+.about-section {
+    max-width: 800px;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+}
+
+
+/* Contact */
+
+.contact-section {
+    max-width: none;
+    background-color: white;
+}
+
+.contact-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    margin-top: 35px;
+}
+
+.contact-container h3 {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #ffb01e;
+    color: #333;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        text-align: center;
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero-icon {
+        font-size: 100px;
+        margin-top: 30px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+}
+
+/* Uniform Materials */
+
+.material-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.material-card {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.material-card:hover {
+    transform: translateY(-8px);
+}
+
+.material-image {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.material-card h3 {
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+.material-card strong {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #333;
+}
+
+
+/* Ready-to-Wear Uniforms */
+
+.ready-section {
+    background-color: #eef5f0;
+
+    max-width: none;
+}
+
+.uniform-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.uniform-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.uniform-card:hover {
+    transform: translateY(-8px);
+}
+
+.uniform-image {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+}
+
+.uniform-card h3 {
+    color: #333;
+
+    margin-bottom: 10px;
+}
+
+.uniform-card p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.availability {
+    display: block;
+
+    color: #333;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.uniform-card button {
+    border: none;
+
+    background-color: #333;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.uniform-card button:hover {
+    background-color: #333;
+}
+
+
+/* Uniform Result */
+
+.uniform-result {
+    max-width: 700px;
+
+    margin: 40px auto 0;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    font-size: 16px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .material-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .uniform-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .material-container {
+        grid-template-columns: 1fr;
+    }
+
+    .uniform-container {
+        grid-template-columns: 1fr;
+    }
+
+}
