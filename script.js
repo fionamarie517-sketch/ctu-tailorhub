@@ -49,21 +49,21 @@ function showUniform(type) {
 
     }
 
+    else if (type === "skirt") {
+
+    result.innerHTML =
+        "<strong>Student Uniform Skirt</strong><br><br>" +
+        "Ready-made CTU uniform skirt available in selected sizes.<br>" +
+        "Visit the tailoring service to check available sizes and price.";
+
+}
+
     else if (type === "pants") {
 
         result.innerHTML =
             "<strong>Student Uniform Pants</strong><br><br>" +
             "Ready-made pants available in selected sizes.<br>" +
             "Visit the tailoring service to check available sizes and price.";
-
-    }
-
-    else if (type === "faculty") {
-
-        result.innerHTML =
-            "<strong>Faculty Uniform</strong><br><br>" +
-            "Availability may vary depending on stock.<br>" +
-            "Contact the tailoring service for current availability.";
 
     }
 
