@@ -72,10 +72,8 @@ header {
 
     padding: 80px 10%;
 
-    background-image: url("ctupic.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-text {
@@ -126,6 +124,40 @@ header {
     font-size: 180px;
 }
 
+/* Hero Slideshow */
+
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slideshow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-text,
+.hero-icon {
+    position: relative;
+    z-index: 1;
+}
 
 /* General Sections */
 
@@ -185,11 +217,15 @@ header {
     color: #333;
 }
 
+#services {
+    background-color: white;
+    max-width: none;
+}
 
 /* Price Guide */
 
 .price-section {
-    background-color: #eef5f0;
+    background-color: white;
     max-width: none;
 }
 
@@ -231,6 +267,11 @@ header {
 
 /* What Needs Fixing */
 
+.fixing-section {
+    background-color: white;
+    max-width: none;
+}
+
 .fixing-container {
     display: flex;
 
@@ -239,6 +280,7 @@ header {
     gap: 15px;
 
     flex-wrap: wrap;
+
 }
 
 .fixing-container button {
@@ -268,7 +310,7 @@ header {
 
     padding: 25px;
 
-    background-color: #e9f3ed;
+    background-color: white;
 
     border-radius: 10px;
 
@@ -277,6 +319,11 @@ header {
 
 
 /* How It Works */
+
+#how {
+    background-color: white;
+    max-width: none;
+}
 
 .steps {
     display: grid;
@@ -320,10 +367,14 @@ header {
 /* About */
 
 .about-section {
-    max-width: 800px;
+    max-width: none;
+    background-color: white;
 }
 
 .about-section p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 15px;
 }
 
@@ -429,13 +480,21 @@ footer h3 {
 
 /* Uniform Materials */
 
+#materials {
+    background-color: white;
+    max-width: none;
+}
+
 .material-container {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    display: flex;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+}
+
+.material-card {
+    width: 300px;
+    flex: 0 0 300px;
 }
 
 .material-card {
@@ -453,6 +512,7 @@ footer h3 {
 
 .material-card:hover {
     transform: translateY(-8px);
+
 }
 
 .material-image {
@@ -475,11 +535,20 @@ footer h3 {
     color: #333;
 }
 
+.material-card img {
+    display: block;
+    margin: 0 auto 15px auto;   /* centers horizontally, adds spacing below */
+    width: 100%;
+    max-width: 180px;           /* adjust this to control the size */
+    height: 180px;              /* match width for a square, or remove for natural ratio */
+    object-fit: cover;          /* crops the image nicely to fill the box without distortion */
+    border-radius: 8px;         /* optional, matches a card-style look */
+}
 
 /* Ready-to-Wear Uniforms */
 
 .ready-section {
-    background-color: #eef5f0;
+    background-color: white;
 
     max-width: none;
 }
@@ -518,6 +587,20 @@ footer h3 {
     font-size: 70px;
 
     margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 120px;
+    overflow: hidden;
+}
+
+.uniform-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .uniform-card h3 {
